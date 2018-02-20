@@ -240,6 +240,11 @@ body {
   margin-right: 10px;
 }
 
+.visa {
+  font-size: 18px;
+  padding: 5px 0px;
+}
+
 
 @media (max-width: 825px) {
 
