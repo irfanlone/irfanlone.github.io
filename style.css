@@ -1,5 +1,8 @@
-body {
+body, html {
   overflow-x: hidden;
+}
+
+body {
   margin: 0;
   font-family: 'Helvetica', san-serif;
   font-family: 'Mukta Mahee', sans-serif;
@@ -46,7 +49,7 @@ body {
   background: #00b09b;
   background: linear-gradient(to right, #00b09b, #96c93d);
   color: #333;
-  padding: 80px 0 150px;
+  padding: 80px 25px 150px;
   font-weight: 300;
   line-height: 150px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -129,7 +132,6 @@ body {
 .content.grey h3 {
   color: #333;
   border-left: none;
-  font-size: 36px;
 }
 
 .work-item {
@@ -139,7 +141,6 @@ body {
 }
 
 .work-item-preview {
-  width: 33%;
   flex: 0 0 200px;
 }
 
@@ -159,14 +160,19 @@ body {
 .work-item .work-item-preview:hover .cover {
   display: block;
   padding-top: 100px;
+  border-radius: 10px;
 }
 
 .work-item .work-item-preview {
   position: relative;
   display: block;
+}
+
+.work-item .work-item-preview-helper {
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
   overflow: hidden;
+  position: relative;
 }
 
 .work-item .work-item-preview img {
@@ -203,6 +209,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 25px;
 }
 
 .tag {
@@ -216,4 +223,95 @@ body {
   padding: 10px 15px 8px;
   margin-bottom: 10px;
   margin-right: 10px;
+}
+
+
+@media (max-width: 825px) {
+
+  .menu .container, .header .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .menu ul {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .menu a {
+    font-size: 16px;
+    margin: 0 0;
+  }
+
+  .header {
+    line-height: 50px;
+    padding: 50px 15px 45px;
+  }
+
+  .header h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .header h1 strong {
+    font-size: 60px;
+    top: 2px;
+  }
+
+  .content h3 {
+    font-size: 26px;
+  }
+
+  .tag {
+    font-size: 16px;
+  }
+
+  .diagonal {
+    display: none;
+  }
+
+  .content.about h3 {
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .header h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .header h1 strong {
+    font-size: 45px;
+    top: 2px;
+  }
+
+  .work-item {
+    display: block;
+  }
+
+  .work-item-preview {
+    width: 100%;
+  }
+
+  .work-item-preview .work-item-preview-helper {
+    max-height: 200px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .work-item-preview .work-item-preview-helper img {
+    position: relative;
+    top: -50px;
+  }
+
+  .work-item .work-item-description {
+    width: 100%;
+    padding-left: 0px;
+  }
+
 }
